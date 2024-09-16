@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- O <p> com id"paragrafo" é mostrado ou ocultado ao clicar nos botões com as devidas funções -->
+</head> 
+
+<body>
+
+
+
+<p id="paragrafo">Parágrafo para ser ocultado ou mostrado</p>
+<button id="botãoMostrar"> Mostrar</button>
+<button id="botãoOcultar">  Ocultar </button>
+
+<script>
+
+    document.getElementById('botãoMostrar').addEventListener('click', function(){
+
+        paragrafo.style.display ="block";
+     })
+ 
+    document.getElementById('botãoOcultar').addEventListener('click', function(){
+
+       paragrafo.style.display ="none";
+    })
+
+</script>
+
+     
+</body>
+
+</html>
