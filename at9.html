@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head> 
+
+<body>
+
+
+<h2>Por favor digite os valores para somar!!</h2>
+<input type="text" id="valoresReceber" placeholder="números separados por vírgula" >
+<button onclick="Somar()"> Fazer a Soma</button>
+<h2 id="resultado"> O resultado da soma é:</h2>
+
+<script>
+    function Somar() {
+
+        var valor = document.getElementById('valoresReceber').value
+        var numeros = valor.split(',').map(Number);
+        var soma = 0;
+        
+        for(var i = 0; i < numeros.length; i++){
+            soma += numeros[i];
+
+        }
+
+        var resultado = document.getElementById('resultado');
+            resultado.textContent="O resultado da soma é: " + soma;
+        
+    }
+</script>
+
+</body>
+
+</html>
