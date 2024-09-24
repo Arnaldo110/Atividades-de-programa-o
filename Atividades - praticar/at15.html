@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head> 
+
+<style>
+
+</style>
+<body>
+
+<h1>Por favor Selecione uma cor para o plano de fundo!!</h1>
+
+<form>
+<input type="radio" id="Vermelho"  name="Cor" value="red">
+<label for="Vermelho">Vermelho </label><br>
+<input type="radio" id="Verde" name="Cor" value="Green">
+<label for="Verde"> Verde</label><br>
+<input type="radio" id="Azul" name="Cor" value="blue">
+<label for="Azul">Azul</label><br>
+<input type="radio" id="Amarelo" name="Cor" value="yellow">
+<label for="Amarelo">Amarelo</label> <br>
+
+</form>
+<script>
+
+   document.querySelectorAll('input[name="Cor"]').forEach((botao) => 
+   {
+      botao.addEventListener('change', function() {
+          document.body.style.backgroundColor = this.value;
+      });
+  });
+   
+
+</script>
+
+     
+</body>
+
+</html>
