@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head> 
+
+
+<body>
+<style>
+
+button{
+width: 200px;
+height: 30px;
+font-size: 12px;
+
+}
+ </style>
+
+<h1> Por favor digite 3 números, e com isso ao clicar no botão será feito uma tabela com 
+    a soma, a média, o produto , o maior e o menor número.
+</h1>
+
+    <form>
+        <label for="numero1"> Primeiro Número </label><br>
+        <input type="text" id="numero1" > <br> <br>
+
+        <label for="numero2"> Segundo Número</label><br>
+        <input type="text" id="numero2"> <br><br>
+        
+        <label for="numero3">Terceiro Número</label><br>
+        <input type="text" id="numero3" ><br><br>
+      
+
+        </form>
+        <button onclick="fazertabela()"> Clique aqui para fazer a tabela! </button>  
+
+<div id="resultado"> </div>
+
+<script>
+
+    function fazertabela(){
+
+        var numero1 = parseFloat(document.getElementById('numero1').value);
+        var numero2 = parseFloat(document.getElementById('numero2').value);
+        var numero3 = parseFloat(document.getElementById('numero3').value);
+
+        var soma = numero1 + numero2 + numero3;
+        var media = soma / 3;
+        var produto = numero1 * numero2 * numero3;
+        var maior = Math.max(numero1, numero2, numero3);
+        var menor = Math.min(numero1, numero2, numero3);
+
+        if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+
+            alert("Por favor, insira três números válidos.");
+            return;
+
+        }
+
+        var tabela = '<table border="1px">' +
+            '<tr><th>Descrição</th><th>Valor</th></tr>' +
+            '<tr><td>Números Digitados</td><td>' + numero1 + ', ' 
+                + numero2 + ', ' + numero3 + '</td></tr>' +
+            '<tr><td>Soma</td><td>' + soma + '</td></tr>' +
+            '<tr><td>Média</td><td>' + media + '</td></tr>' +
+            '<tr><td>Produto</td><td>' + produto + '</td></tr>' +
+            '<tr><td>Maior Número</td><td>' + maior + '</td></tr>' +
+            '<tr><td>Menor Número</td><td>' + menor + '</td></tr>' +
+            '</table>';
+
+   
+        document.getElementById('resultado').innerHTML = tabela;
+    }
+    
+</script>
+</body>
+</html>
