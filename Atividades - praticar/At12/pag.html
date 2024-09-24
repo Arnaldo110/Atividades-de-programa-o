@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head> 
+
+<body>
+
+
+<button  onclick="Pequena()"> Pequena</button>
+<button  onclick="Média()"> Média</button>
+<button  onclick="Grande()"> Grande</button> <br>
+<br><img id=imagem src="cachorro.jpg" height="300" width="300">
+
+<script>
+
+     function Pequena(){
+
+   var img = document.getElementById('imagem');
+       img.style.width ='100px';
+       img.style.height = '100px';
+    }
+
+    function Média(){
+
+        var img = document.getElementById('imagem');
+            img.style.width ='300px';
+            img.style.height = '300px';
+         }
+
+         function Grande(){
+
+            var img = document.getElementById('imagem');
+                img.style.width ='500px';
+                img.style.height = '500px';
+             }
+
+</script>   
+</body>
+</html>
 
