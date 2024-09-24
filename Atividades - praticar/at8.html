@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- A cor do fundo do título terá a sua cor alterada para verde se o número digitado for par, e vermelhor se for ímpar -->
+
+</head> 
+
+<body>
+
+<h1 id="par" > Elemento html que será trocado a cor ou não</h1>
+
+<form id="formulario">
+    <label for="numero">Digite um número:</label>
+    <input type="text" id="valor" >
+    <button type="button" onclick="alterarCor()">Confirmar</button>
+</form>
+
+<script>
+
+    
+    
+
+        function alterarCor() {
+            var par = document.getElementById('par');
+            var valor = document.getElementById('valor').value;
+
+           
+            if (valor === '' || isNaN(valor)) {
+                alert('Por favor, insira um número válido.');
+                return;
+            }
+
+            var numero = parseInt(valor);
+
+            if (numero % 2 == 0) {
+                par.style.backgroundColor = "green";
+            } else {
+                par.style.backgroundColor = "red";
+            }
+        }
+
+</script>
+
+</body>
+
+</html>

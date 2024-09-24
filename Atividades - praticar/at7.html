@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Alterar a cor de fundo ao passar o mouse por cima do texto -->
+    
+</head> 
+
+<body>
+<h1 id="container">Elemento que terá seu fundo alterado para vermelho </h1>
+
+<script>
+    
+    document.getElementById('container').addEventListener('mouseover',function(){
+
+       this.style.backgroundColor='red';
+    })
+    document.getElementById('container').addEventListener('mouseout',function(){
+
+        this.style.backgroundColor='';
+     })
+
+
+</script>
+
+</body>
+
+</html>

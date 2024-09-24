@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Nos 3 itens que há no código, ao clicar no botão destaque os 3 itens serão adicionados a classe
+    CSS de destaque.  -->
+</head> 
+
+<body>
+    <style>
+        .item {
+            padding: 10px;
+        }
+
+        .destaque {
+            background-color: blueviolet;
+            font-size: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p class="item">Item 1</p>
+    <p class="item">Item 2</p>
+    <p class="item">Item 3</p>
+    
+    <button onclick="adicionarDestaque()">Adicionar Destaque!</button>
+
+    <script>
+        function adicionarDestaque() {
+            var elementosPag = document.querySelectorAll('.item');
+            elementosPag.forEach(function(elementoDestaque) 
+            {
+                elementoDestaque.classList.add('destaque');
+            });
+        }
+
+    </script>  
+</body>
+</html>
