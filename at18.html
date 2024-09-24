@@ -57,20 +57,19 @@ font-size: 12px;
 
         }
 
-        var tabela = '<table border="1px">' +
-            '<tr><th>Descrição</th><th>Valor</th></tr>' +
-            '<tr><td>Números Digitados</td><td>' + numero1 + ', ' 
-                + numero2 + ', ' + numero3 + '</td></tr>' +
-            '<tr><td>Soma</td><td>' + soma + '</td></tr>' +
-            '<tr><td>Média</td><td>' + media + '</td></tr>' +
-            '<tr><td>Produto</td><td>' + produto + '</td></tr>' +
-            '<tr><td>Maior Número</td><td>' + maior + '</td></tr>' +
-            '<tr><td>Menor Número</td><td>' + menor + '</td></tr>' +
-            '</table>';
+       var tabela = `
+    <table border="1px">
+        <tr><th>Descrição</th><th>Valor</th></tr>
+        <tr><td>Números Digitados</td><td>${numero1}, ${numero2}, ${numero3}</td></tr>
+        <tr><td>Soma</td><td>${soma}</td></tr>
+        <tr><td>Média</td><td>${media}</td></tr>
+        <tr><td>Produto</td><td>${produto}</td></tr>
+        <tr><td>Maior Número</td><td>${maior}</td></tr>
+        <tr><td>Menor Número</td><td>${menor}</td></tr>
+    </table>
+`;
 
-   
-        document.getElementById('resultado').innerHTML = tabela;
-    }
+document.getElementById('resultado').innerHTML = tabela;
     
 </script>
 </body>
