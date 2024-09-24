@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head> 
+
+<body>
+<style>
+
+
+
+</style>
+
+<img id="PrimeiroCachorro" onclick="Aumentar('cachorro1.jpg')" src="cachorro1.jpg" height="100" width="100">
+<img id="SegundoCachorro"  onclick="Aumentar('cachorro2.jpg')" src="cachorro2.jpg" height="100" width="100">
+<img id="TerceiroCachorro" onclick="Aumentar('cachorro3.jpg')" src="cachorro3.jpg" height="100" width="100">
+<div id="Aumentada"> </div>
+
+<script>
+    function Aumentar(src){
+
+            var aumentada = document.getElementById('Aumentada');
+            aumentada.innerHTML ='';
+            var img= document.createElement('img');
+            img.src=src;
+            aumentada.appendChild(img);
+            
+         }
+         
+</script>   
+</body>
+</html>
 
