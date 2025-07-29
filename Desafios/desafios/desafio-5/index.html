@@ -1,1 +1,59 @@
-<!-- Arquivo inicial do Desafio 5 -->
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Crud </title>
+
+</head>
+
+<body>
+
+<h1>Gerenciador de tarefas </h1>
+
+<div class="container">
+    <div class="button-container">
+        <button id="cadastrarTarefa">Cadastrar Tarefa</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Função</th>
+            </tr>
+        </thead>
+        <tbody id="listaTarefa"></tbody>
+    </table>
+</div>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" id="fecharModal">&times;</span>
+            <h2 id="modalTitle">Novo Cliente</h2>
+        </div>
+
+        <div class="modal-body">
+            <form id="formTarefa">
+                <label for="titulo">Título da Tarefa:</label>
+                <input type="text" id="titulo" placeholder="Título da Tarefa" required>
+                <label for="descricao">Descrição da Tarefa:</label>
+                <input type="text" id="descricao" placeholder="Descrição da Tarefa" required>
+            </form>
+            
+        </div>
+        <div class="modal-footer">
+            <button id="salvarTarefa" class="btn btn-green">Salvar</button>
+            <button id="fecharModal"  class="btn btn-red">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<script src="funcoes.js"></script>
+</body>
+</html>
